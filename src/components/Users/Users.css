@@ -1,0 +1,65 @@
+
+.user-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.user-list-container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.user-card {
+  background-color: #f0f4f8;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.user-card:hover {
+  transform: translateY(-3px);
+}
+
+.user-card h2 {
+  margin-top: 0;
+  color: #0077cc;
+}
+
+.user-card p {
+  margin: 5px 0;
+}
+
+.user-card a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.user-card a:hover {
+  text-decoration: underline;
+}
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-btn {
+  background: #6c63ff;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #4b45c7;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(108, 99, 255, 0.7);
+}
