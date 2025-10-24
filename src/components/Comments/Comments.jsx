@@ -1,19 +1,18 @@
 import CommentsCards from "./Comments-card/Comments-cards";
-
+import "./Comments.css";
 import { NavLink } from "react-router-dom";
 
-import "./Comments.css";
-
-function Comments({ comments }) {
+function Comments() {
   return (
     <div className="comments-container">
       <h1 className="page-title">💬 Comments</h1>
+
       <div className="comments-grid">
-        <CommentsCards comments={comments} />
+        <CommentsCards />
       </div>
       <div className="home-buttons">
         <NavLink to="/" className="home-btn">
-          Go Back
+          Go Home
         </NavLink>
       </div>
     </div>

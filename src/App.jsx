@@ -1,27 +1,37 @@
-import "./App.css";
-import Comments from "./components/Comments/Comments";
-import Posts from "./components/Posts/Posts";
-import PhotoGallery from "./components/Photos/PhotoGallery";
-import Users from "./components/Users/Users";
-import Navbar from "./components/Navbar/Navbar";
-import ErrorPage from "./components/ErrorPage/ErrorPage";
-import Home from "./components/Home/Home";
+import {
+  Comments,
+  Posts,
+  PhotoGallery,
+  Users,
+  UserDetails,
+  ErrorPage,
+  Home,
+  PhotoDetails,
+  PostDetails,
+  CommentDetails,
+} from "./components/ImportFile";
 
 import { Routes, Route } from "react-router-dom";
+import { Layout } from "./components/Layout/Layout";
 
-function App({ posts, comments, photos, users }) {
+import "./App.css"
+
+function App() {
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/posts" element={<Posts posts={posts} />} />
-        <Route path="/comments" element={<Comments comments={comments} />} />
-        <Route path="/photos" element={<PhotoGallery photos={photos} />} />
-        <Route path="/users" element={<Users users={users} />} />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Home />} />
+        <Route path="posts" element={<Posts />} />
+        <Route path="posts/:id" element={<PostDetails />} />
+        <Route path="comments" element={<Comments />} />
+        <Route path="comments/:id" element={<CommentDetails />} />
+        <Route path="photos" element={<PhotoGallery />} />
+        <Route path="photos/:id" element={<PhotoDetails />} />
+        <Route path="users" element={<Users />} />
+        <Route path="users/:id" element={<UserDetails />} />
         <Route path="*" element={<ErrorPage />} />
-      </Routes>
-    </>
+      </Route>
+    </Routes>
   );
 }
 
